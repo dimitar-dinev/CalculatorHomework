@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="CASIO HS-4G"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/memoryTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/mainTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        tools:text="M" />
+
+    <TextView
+        android:id="@+id/mainTextView"
+        android:layout_width="340dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center|center_vertical"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textSize="62sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memoryTextView" />
+
+    <Button
+        android:id="@+id/memoryClearButton"
+        style="@style/MemoryButtons"
+        android:layout_marginStart="16dp"
+        android:text="MC"
+        app:layout_constraintEnd_toStartOf="@+id/memoryReadButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTextView" />
+
+    <Button
+        android:id="@+id/allClearButton"
+        style="@style/NumberButtons"
+        android:text="AC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memoryClearButton" />
+
+    <Button
+        android:id="@+id/sevenButton"
+        style="@style/NumberButtons"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allClearButton" />
+
+    <Button
+        android:id="@+id/fourButton"
+        style="@style/NumberButtons"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sevenButton" />
+
+    <Button
+        android:id="@+id/oneButton"
+        style="@style/NumberButtons"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fourButton" />
+
+    <Button
+        android:id="@+id/zeroButton"
+        style="@style/NumberButtons"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oneButton" />
+
+    <Button
+        android:id="@+id/decimalButton"
+        style="@style/NumberButtons"
+        android:text="."
+        app:layout_constraintStart_toEndOf="@+id/zeroButton"
+        app:layout_constraintTop_toBottomOf="@+id/twoButton" />
+
+    <Button
+        android:id="@+id/additionButton"
+        style="@style/NumberButtons"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calculateButton2"
+        app:layout_constraintTop_toBottomOf="@+id/subtractButton" />
+
+    <Button
+        android:id="@+id/calculateButton2"
+        style="@style/NumberButtons"
+        android:text="="
+        app:layout_constraintStart_toEndOf="@+id/decimalButton"
+        app:layout_constraintTop_toBottomOf="@+id/threeButton" />
+
+    <Button
+        android:id="@+id/twoButton"
+        style="@style/NumberButtons"
+
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@+id/oneButton"
+        app:layout_constraintTop_toBottomOf="@+id/fiveButton" />
+
+    <Button
+        android:id="@+id/threeButton"
+        style="@style/NumberButtons"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@+id/twoButton"
+        app:layout_constraintTop_toBottomOf="@+id/sixButton" />
+
+    <Button
+        android:id="@+id/subtractButton"
+        style="@style/NumberButtons"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/threeButton"
+        app:layout_constraintTop_toBottomOf="@+id/multiplyButton" />
+
+    <Button
+        android:id="@+id/fiveButton"
+        style="@style/NumberButtons"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@+id/fourButton"
+        app:layout_constraintTop_toBottomOf="@+id/eightButton" />
+
+    <Button
+        android:id="@+id/sixButton"
+        style="@style/NumberButtons"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@+id/fiveButton"
+        app:layout_constraintTop_toBottomOf="@+id/nineButton" />
+
+    <Button
+        android:id="@+id/multiplyButton"
+        style="@style/NumberButtons"
+        android:text="X"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sixButton"
+        app:layout_constraintTop_toBottomOf="@+id/divideButton" />
+
+    <Button
+        android:id="@+id/eightButton"
+        style="@style/NumberButtons"
+        android:text="8"
+        app:layout_constraintStart_toEndOf="@+id/sevenButton"
+        app:layout_constraintTop_toBottomOf="@+id/clearButton" />
+
+    <Button
+        android:id="@+id/nineButton"
+        style="@style/NumberButtons"
+        android:text="9"
+        app:layout_constraintStart_toEndOf="@+id/eightButton"
+        app:layout_constraintTop_toBottomOf="@+id/percentButton" />
+
+    <Button
+        android:id="@+id/divideButton"
+        style="@style/NumberButtons"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nineButton"
+        app:layout_constraintTop_toBottomOf="@+id/squareRootButton" />
+
+    <Button
+        android:id="@+id/squareRootButton"
+        style="@style/NumberButtons"
+        android:text="V"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/percentButton"
+        app:layout_constraintTop_toBottomOf="@+id/memoryAdditionButton" />
+
+    <Button
+        android:id="@+id/percentButton"
+        style="@style/NumberButtons"
+        android:text="%"
+        app:layout_constraintStart_toEndOf="@+id/clearButton"
+        app:layout_constraintTop_toBottomOf="@+id/memorySubtractButton" />
+
+    <Button
+        android:id="@+id/clearButton"
+        style="@style/NumberButtons"
+        android:text="C"
+        app:layout_constraintStart_toEndOf="@+id/allClearButton"
+        app:layout_constraintTop_toBottomOf="@+id/memorySubtractButton" />
+
+    <Button
+        android:id="@+id/memorySubtractButton"
+        style="@style/MemoryButtons"
+        android:text="M-"
+        app:layout_constraintEnd_toStartOf="@+id/memoryAdditionButton"
+        app:layout_constraintTop_toBottomOf="@+id/mainTextView" />
+
+    <Button
+        android:id="@+id/memoryAdditionButton"
+        style="@style/MemoryButtons"
+        android:text="M+"
+        app:layout_constraintEnd_toStartOf="@+id/changeSignButton"
+        app:layout_constraintTop_toBottomOf="@+id/mainTextView" />
+
+    <Button
+        android:id="@+id/changeSignButton"
+        style="@style/MemoryButtons"
+        android:layout_marginEnd="16dp"
+        android:text="+/-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTextView" />
+
+    <Button
+        android:id="@+id/memoryReadButton"
+        style="@style/MemoryButtons"
+        android:text="MR"
+        app:layout_constraintEnd_toStartOf="@+id/memorySubtractButton"
+        app:layout_constraintTop_toBottomOf="@+id/mainTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
