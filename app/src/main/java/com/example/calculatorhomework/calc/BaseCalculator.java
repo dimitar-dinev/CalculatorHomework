@@ -118,12 +118,12 @@ public  class BaseCalculator {
 
     public void changeSign() {
         this.currentResult = -currentResult;
-        hasNewResult = true;
+        this.hasNewResult = true;
     }
 
 
     public void calculate() {
-        if (currentOperation != null) {
+        if (this.currentOperation != null) {
             Log.d(TAG, "calculate() ..");
             switch (currentOperation) {
                 case ADDITION:
@@ -145,9 +145,9 @@ public  class BaseCalculator {
                     squareRoot();
                     break;
             }
-            isNewInput = true;
-            hasNewResult = true;
-            justCalculated = true;
+            this.isNewInput = true;
+            this.hasNewResult = true;
+            this.justCalculated = true;
         }
     }
 
@@ -185,7 +185,7 @@ public  class BaseCalculator {
 
      public void memoryRead() {
          this.currentResult = this.memoryValue;
-         hasNewResult = true;
+         this.hasNewResult = true;
      }
 
 }
